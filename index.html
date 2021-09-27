@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang=”en-GB” data-framework="javascript">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport"
+  content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Todo VanillaJS App | Cliff</title>
+  <link rel="shortcut icon"
+  href="lib/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <marquee behavior="scroll" bgColor="#eee" direction="">
+    kindly double-tap a task to edit then hit the enter 🔑
+  </marquee>
+
+  <div id="app"></div>
+  <!-- CSS Styles are 100% optional. but they make it look *much* nicer -->
+  <link rel="stylesheet" href="lib/style.css">
+  <script src="lib/elmish.js"></script>
+  <script src="lib/app.js"></script>
+  <script>
+    var model = {
+      todos: [
+        // { id: 0, title: "Make something people want.", done: false },
+        // { id: 1, title: "Bootstrap for as long as you can", done: false },
+        // { id: 2, title: "Let's solve our own problem", done: false }
+      ],
+      hash: '#/', // the "route" to display
+      // editing: 2 // edit the 3rd todo list item (which has id == 2)
+    };
+    mount(model, update, view, 'app', subscriptions);
+  </script>
+</body>
+</html>
